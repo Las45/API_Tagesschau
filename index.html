@@ -9,7 +9,14 @@
 <body>
     <h1>Aktuelle Nachrichten</h1>
     <button onclick="ladeNachrichten()">Nachrichten laden</button>
+    <button onclick="changeURL('https://www.tagesschau.de/api2u/news/?ressort=politik')">Nachrichten laden</button>
     <div id="ausgabe"></div>    
+    <label for="region">Bundesland:</label>
+    <select id="region" name="region" onchange="changeURL(this.value)">
+        <option value="3">Politik</option>
+        <option value="2">Wirtschaft</option>
+        <option value="1t">Sport</option>
+        <option value="1">Kultur</option>
     <script src="script.js"></script>
 </body>
 </html>

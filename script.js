@@ -1,5 +1,6 @@
+const url;
 async function ladeNachrichten() {
-    const url = "https://www.tagesschau.de/api2u/news/";
+    url = "https://www.tagesschau.de/api2u/news/";
     const response = await fetch(url);
 
     const data = await response.json();
@@ -18,4 +19,9 @@ async function ladeNachrichten() {
         <hr>
         `;
     })
+}
+
+function changeURL(url_){
+    url = url_;
+    ladeNachrichten();
 }
